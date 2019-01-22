@@ -1,15 +1,19 @@
 {{jsonString | json}}
 <div [formGroup]="myForm">
-<div formArrayName="items"
-  *ngFor="let item of myForm.get('items').controls; let i = index;">
-  <div [formGroupName]="i">
-    <input formControlName="name" placeholder="Item name">
-    <input formControlName="description" placeholder="Item description">
-    <input formControlName="price" placeholder="Item price">
+  <div formArrayName="items" *ngFor="let item of myForm.get('items').controls; let i = index;">
+    <div [formGroupName]="i">
+      <!--Input-Forms-->
+      <input formControlName="name" placeholder="Item name">
+      <input formControlName="description" placeholder="Item description">
+      <input formControlName="price" placeholder="Item price">
+      <input formControlName="websiteUrl" placeholder="Url">
+      <br>
+      <!--Validation-->
+      <div>
+        {{myForm.valid}}
+      </div>
+    </div>
   </div>
-</div>
 </div>
 
 <button (click)="addItem()">New Row</button>
-
-

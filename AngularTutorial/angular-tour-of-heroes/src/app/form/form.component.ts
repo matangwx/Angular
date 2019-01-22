@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormArray } from '@angular/forms';
+import { FormGroup, FormArray, Validators } from '@angular/forms';
 import { FormBuilder } from '@angular/forms';
+import { ValidateUrl } from './url.validator';
 
 @Component({
   selector: 'app-form',
@@ -27,13 +28,15 @@ export class FormComponent implements OnInit {
     this.myForm.valueChanges.subscribe(val => {
       this.jsonString = this.myForm.value;
     });
+
   }
 
   createItem(): FormGroup {
     return this.fb.group({
-      name: '',
-      description: '',
-      price: ''
+      name: ['', [Validators.required]],
+      description: ['', [Validators.required]],
+      price: ['', [Validators.required]],
+      websiteUrl: ['', [Validators.required, ValidateUrl]]
     });
   }
 

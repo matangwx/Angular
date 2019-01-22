@@ -8,6 +8,7 @@ import { HeroDetailComponent } from './hero-detail/hero-detail.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { FormComponent } from './form/form.component';
+import { ValidatingformComponent } from './validatingform/validatingform.component';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { FormComponent } from './form/form.component';
     HeroesComponent,
     HeroDetailComponent,
     NameEditorComponent,
-    FormComponent
+    FormComponent,
+    ValidatingformComponent
   ],
   imports: [
     BrowserModule,
