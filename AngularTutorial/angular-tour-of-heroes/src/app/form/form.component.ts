@@ -19,7 +19,7 @@ export class FormComponent implements OnInit {
 
   ngOnInit() {
     this.myForm = this.fb.group({
-      items: this.fb.array([this.createItem()]),
+      items: this.fb.array([this.createItem(), this.createItem(), this.createItem(), this.createItem(), this.createItem()]),
     });
     this.onChanges();
   }
