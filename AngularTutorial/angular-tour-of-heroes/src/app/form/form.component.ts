@@ -28,7 +28,6 @@ export class FormComponent implements OnInit {
     this.myForm.valueChanges.subscribe(val => {
       this.jsonString = this.myForm.value;
     });
-
   }
 
   createItem(): FormGroup {
