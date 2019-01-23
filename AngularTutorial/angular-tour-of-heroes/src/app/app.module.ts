@@ -9,6 +9,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { NameEditorComponent } from './name-editor/name-editor.component';
 import { FormComponent } from './form/form.component';
 import { ValidatingformComponent } from './validatingform/validatingform.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
